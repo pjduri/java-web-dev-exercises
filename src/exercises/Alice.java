@@ -16,8 +16,8 @@ public class Alice {
 
         System.out.println("Please enter search term: ");
         searchTerm = input.next();
-        int index = sentence.indexOf(searchTerm);
-        int length = searchTerm.length();
+        Integer index = sentence.indexOf(searchTerm);
+        Integer length = searchTerm.length();
 
         if (sentence.toLowerCase().contains(searchTerm.toLowerCase())) {
             System.out.println(searchTerm + " can be found at index " + index +
