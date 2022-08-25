@@ -1,4 +1,4 @@
-package exercises.exercises.controlflowandcollections;
+package exercises.ch3exercises;
 
 import java.util.Arrays;
 
@@ -23,3 +23,4 @@ public class ArrayPractice {
     }
 
 }
+
