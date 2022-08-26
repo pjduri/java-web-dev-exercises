@@ -22,6 +22,7 @@ public class CountingCharacters {
 
         char[] charactersInString = exampleString.toCharArray();
         HashMap<Character, Integer> letterCount = new HashMap<>();
+
         for (char character: charactersInString){
             if(letterCount.containsKey(character)){
                 letterCount.put(character, letterCount.get(character)+1);
