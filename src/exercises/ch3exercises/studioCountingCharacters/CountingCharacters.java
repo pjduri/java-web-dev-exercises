@@ -1,4 +1,4 @@
-package exercises.ch3exercises.ch3Studio;
+package exercises.ch3exercises.studioCountingCharacters;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +20,7 @@ public class CountingCharacters {
         String anotherExample = input.nextLine();
 
 
-        char[] charactersInString = exampleString.toCharArray();
+        char[] charactersInString = anotherExample.replaceAll("\\p{Punct}", "").toLowerCase().toCharArray();
         HashMap<Character, Integer> letterCount = new HashMap<>();
 
         for (char character: charactersInString){
