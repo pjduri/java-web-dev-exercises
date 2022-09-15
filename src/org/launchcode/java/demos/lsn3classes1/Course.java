@@ -1,6 +1,7 @@
 package org.launchcode.java.demos.lsn3classes1;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class Course {
 
@@ -43,6 +44,28 @@ public class Course {
         return studentRoster;
     }
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "subject='" + subject + '\'' +
+                ", department='" + department + '\'' +
+                ", instructor='" + instructor + '\'' +
+                ", studentRoster=" + studentRoster +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return subject.equals(course.subject) && department.equals(course.department) && instructor.equals(course.instructor);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(subject, department, instructor);
+    }
 }
 
 // course needs name, department, instructor(string), student roster, number of seats(available/filled),
